@@ -73,10 +73,10 @@ In a Containerized Python Component, `base_image` specifies the base image that 
 The previous example includes `base_image` for clarity, but this is not necessary as `base_image` will default to `'python:3.7'` if omitted.
 
 ### 3. Build the component
-Now that your code is in a standalone directory and you've specified a target image, you can conveniently build an image using the [`kfp component build`][kfp-component-build] CLI command:
+Now that your code is in a standalone directory and you've specified a target image, you can conveniently build an image using the [`kfp components build`][kfp-components-build] CLI command:
 
 ```sh
-kfp component build src/ --component-filepattern my_component.py --no-push-image
+kfp components build src/ --component-filepattern my_component.py --no-push-image
 ```
 
 If you have a [configured Docker to use a private image registry](https://docs.docker.com/engine/reference/commandline/login/), you can replace the `--no-push-image` flag with `--push-image` to automatically push the image after building.
